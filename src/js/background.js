@@ -16,7 +16,7 @@
   }
 
   function openCaniuseSite(selectedText) {
-    chrome.tabs.create({ url: `https://caniuse.com/#search=${formatSelectedText(selectedText)}` });
+    chrome.tabs.create({ url: `https://caniuse.com/#search=${selectedText}` });
   }
 
   function formatSelectedText(selectedText) {
@@ -26,7 +26,7 @@
   createContextMenu();
 
   chrome.contextMenus.onClicked.addListener((info) => {
-    openCaniuseSite(info.selectionText);
+    openCaniuseSite(info.selectionText); // info.selectionText trimmed automatically
   });
 
   chrome.runtime.onMessage.addListener((response) => {
