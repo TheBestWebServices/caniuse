@@ -1,0 +1,11 @@
+{
+  "ext_name": {
+    "message": "Caniuse Finder"
+  },
+  "ext_description": {
+    "message": "Extension shows info about supporting front-end web technologies in different browsers on caniuse.com site"
+  },
+  "context_menu_title": {
+    "message": "Show \"{{ selected }}\" on caniuse.com"
+  }
+}

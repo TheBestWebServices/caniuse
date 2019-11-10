@@ -1,0 +1,11 @@
+{
+  "ext_name": {
+    "message": "Caniuse Finder"
+  },
+  "ext_description": {
+    "message": "Расширение показывает информацию о поддержке веб-технологий в разных браузерах на сайте caniuse.com"
+  },
+  "context_menu_title": {
+    "message": "Показать \"{{ selected }}\" на caniuse.com"
+  }
+}

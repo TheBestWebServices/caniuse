@@ -1,0 +1,17 @@
+{
+  "name": "caniuse-finder",
+  "version": "0.0.1",
+  "description": "Pomodoro Timer is a free and great tool that can help you boost your productivity and quality of your work.",
+  "scripts": {
+    "build": "gulp"
+  },
+  "author": "The Best Web Services <thebestwebservices@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "del": "^5.1.0",
+    "gulp": "^4.0.2",
+    "gulp-debug": "^4.0.0",
+    "require-dir": "^1.2.0"
+  },
+  "dependencies": {}
+}
