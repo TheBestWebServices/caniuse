@@ -1,12 +1,12 @@
-document.addEventListener('mousedown', function(event){
-  if (event.button !== 2) return;
+!function() {
+  document.addEventListener('mouseup', () => {
+    var selectedText = window.getSelection().toString();
 
-  var selectedText = window.getSelection().toString();
+    if (!selectedText) return;
 
-  if (event.button === 2 && selectedText !== '') {
     chrome.extension.sendMessage({
       signal: 'updateContextMenu',
       selectedText
     });
-  }
-});
+  });
+}();

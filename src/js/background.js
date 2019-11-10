@@ -1,4 +1,4 @@
-(function() {
+!function() {
   const id = 'caniuse-finder';
 
   function createContextMenu() {
@@ -38,4 +38,4 @@
         console.error('Undefined signal');
     }
   });
-})();
+}();
