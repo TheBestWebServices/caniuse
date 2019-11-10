@@ -11,23 +11,31 @@
 
   function updateContextMenu(selectedText) {
     chrome.contextMenus.update(id, {
-      'title': chrome.i18n.getMessage('context_menu_title').replace('{{ selected }}', selectedText)
+      'title': chrome.i18n.getMessage('context_menu_title').replace('{{ selected }}', formatSelectedText(selectedText))
     });
+  }
+
+  function openCaniuseSite(selectedText) {
+    chrome.tabs.create({ url: `https://caniuse.com/#search=${formatSelectedText(selectedText)}` });
+  }
+
+  function formatSelectedText(selectedText) {
+    return selectedText.trim();
   }
 
   createContextMenu();
 
   chrome.contextMenus.onClicked.addListener((info) => {
-    chrome.tabs.create({ url: `https://caniuse.com/#search=${info.selectionText}` });
+    openCaniuseSite(info.selectionText);
   });
 
   chrome.runtime.onMessage.addListener((response) => {
     switch (response.signal) {
       case 'updateContextMenu':
-        updateContextMenu(response.selectedText);
+        setTimeout(() => updateContextMenu(response.selectedText));
         break;
       default:
-        updateContextMenu(response.selectedText);
+        console.error('Undefined signal');
     }
   });
 })();

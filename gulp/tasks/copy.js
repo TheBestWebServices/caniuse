@@ -5,8 +5,8 @@ const
   debug = require('gulp-debug')
 ;
 
-gulp.task('copy', function() {
-  return gulp.src(['src/**/*.*'])
+gulp.task('copy', () => {
+  return gulp.src(['src/**'])
     .pipe(debug({'title': 'copying files...'}))
     .pipe(gulp.dest('public'))
   ;

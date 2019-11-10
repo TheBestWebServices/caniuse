@@ -2,9 +2,7 @@
 
 const
   gulp = require('gulp'),
-  del = require('del') // default function in gulp >= 4.0  // del('folder-path')
+  del = require('del')
 ;
 
-gulp.task('clean', function() {
-  return del(['public/**/*']);
-});
+gulp.task('clean', () => del(['public/**/*']));

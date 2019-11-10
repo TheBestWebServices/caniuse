@@ -3,7 +3,8 @@
   "version": "0.0.1",
   "description": "Pomodoro Timer is a free and great tool that can help you boost your productivity and quality of your work.",
   "scripts": {
-    "build": "gulp"
+    "build": "gulp",
+    "watch": "gulp watch"
   },
   "author": "The Best Web Services <thebestwebservices@gmail.com>",
   "license": "MIT",

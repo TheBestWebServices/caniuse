@@ -1,7 +1,9 @@
-window.addEventListener('contextmenu', () => {
-  const selectedText = window.getSelection().toString();
+document.addEventListener('mousedown', function(event){
+  if (event.button !== 2) return;
 
-  if (selectedText !== '') {
+  var selectedText = window.getSelection().toString();
+
+  if (event.button === 2 && selectedText !== '') {
     chrome.extension.sendMessage({
       signal: 'updateContextMenu',
       selectedText
