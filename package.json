@@ -1,7 +1,7 @@
 {
   "name": "caniuse-finder",
   "version": "0.0.2",
-  "description": "Pomodoro Timer is a free and great tool that can help you boost your productivity and quality of your work.",
+  "description": "Find info about some element on caniuse.com site by clicking right mouse button.",
   "scripts": {
     "build": "gulp",
     "watch": "gulp watch"
