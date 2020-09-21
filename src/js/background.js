@@ -5,18 +5,18 @@
     chrome.contextMenus.create({
       'id': id,
       'title': chrome.i18n.getMessage('context_menu_title'),
-      'contexts': ['selection']
+      'contexts': ['selection'],
     });
   }
 
   function updateContextMenu(selectedText) {
     chrome.contextMenus.update(id, {
-      'title': chrome.i18n.getMessage('context_menu_title').replace('{{ selected }}', formatSelectedText(selectedText))
+      'title': chrome.i18n.getMessage('context_menu_title').replace('{{ selected }}', formatSelectedText(selectedText)),
     });
   }
 
   function openCaniuseSite(selectedText) {
-    chrome.tabs.create({ url: `https://caniuse.com/#search=${selectedText}` });
+    chrome.tabs.create({ url: `https://caniuse.com/?search=${selectedText}` });
   }
 
   function formatSelectedText(selectedText) {
@@ -27,6 +27,10 @@
 
   chrome.contextMenus.onClicked.addListener((info) => {
     openCaniuseSite(info.selectionText); // info.selectionText trimmed automatically
+  });
+
+  chrome.browserAction.onClicked.addListener(() => {
+    openCaniuseSite('');
   });
 
   chrome.runtime.onMessage.addListener((response) => {

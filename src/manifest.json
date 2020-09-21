@@ -5,7 +5,7 @@
   "description": "__MSG_ext_description__",
   "default_locale" : "en",
 
-  "version": "0.0.2",
+  "version": "1.0.0",
 
   "permissions": [
     "activeTab",
@@ -18,8 +18,7 @@
   ],
 
   "browser_action": {
-    "default_title": "__MSG_ext_name__",
-    "default_popup": "popup.html"
+    "default_title": "__MSG_ext_name__"
   },
 
   "icons": {

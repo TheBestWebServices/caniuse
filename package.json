@@ -1,18 +1,20 @@
 {
   "name": "caniuse-finder",
-  "version": "0.0.2",
+  "version": "1.0.0",
   "description": "Find info about some element on caniuse.com site by clicking right mouse button.",
   "scripts": {
-    "build": "gulp",
-    "watch": "gulp watch"
+    "dev": "NODE_ENV=development webpack",
+    "watch": "NODE_ENV=development webpack --watch",
+    "build": "NODE_ENV=production webpack"
   },
   "author": "The Best Web Services <thebestwebservices@gmail.com>",
   "license": "MIT",
   "devDependencies": {
-    "del": "^5.1.0",
-    "gulp": "^4.0.2",
-    "gulp-debug": "^4.0.0",
-    "require-dir": "^1.2.0"
+    "clean-webpack-plugin": "^3.0.0",
+    "copy-webpack-plugin": "^6.1.1",
+    "eslint": "^7.9.0",
+    "webpack": "^4.44.2",
+    "webpack-cli": "^3.3.12"
   },
   "dependencies": {}
 }
