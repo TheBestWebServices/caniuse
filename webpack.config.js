@@ -18,7 +18,7 @@ module.exports = {
     new CleanWebpackPlugin(),
     new CopyPlugin({
       patterns: [
-        { from: '**/*.{json,png}', to: '[path][name].[ext]', context: 'src/' },
+        { from: '**/*.{json,png}', to: '[path][name][ext]', context: 'src/' },
       ],
     }),
   ],
