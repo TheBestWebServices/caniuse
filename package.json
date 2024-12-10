@@ -1,6 +1,6 @@
 {
   "name": "caniuse-finder",
-  "version": "2.0.0",
+  "version": "2.1.0",
   "description": "Find info about some element on caniuse.com site by clicking right mouse button.",
   "scripts": {
     "dev": "NODE_ENV=development webpack",
