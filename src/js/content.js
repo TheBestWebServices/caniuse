@@ -4,7 +4,7 @@
 
     if (!selectedText) return;
 
-    chrome.extension.sendMessage({
+    chrome.runtime.sendMessage({
       signal: 'updateContextMenu',
       selectedText,
     });

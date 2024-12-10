@@ -29,7 +29,7 @@
     openCaniuseSite(info.selectionText); // info.selectionText trimmed automatically
   });
 
-  chrome.browserAction.onClicked.addListener(() => {
+  chrome.action.onClicked.addListener(() => {
     openCaniuseSite('');
   });
 

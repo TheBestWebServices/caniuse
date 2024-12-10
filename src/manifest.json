@@ -20,7 +20,7 @@
     }
   ],
 
-  "browser_action": {
+  "action": {
     "default_title": "__MSG_ext_name__"
   },
 
